@@ -1,6 +1,6 @@
-import streamlit as st
 import re
 from collections import defaultdict
+import streamlit as st
 
 # 都道府県名を取り出す関数
 def extract_prefecture(address):
@@ -28,7 +28,14 @@ for addr in addresses:
 # ----------------- ここからStreamlit -----------------
 
 st.title("Worldcoin ORB設置場所検索ツール")
+# 招待コード表示セクション
+st.markdown("## 📢 招待コード")
 
+invite_code = "K4M7NYJ"
+st.code(invite_code, language='text')
+
+# コピー用の説明（streamlit標準では自動コピー不可）
+st.button("📋 このコードをコピーしました！", on_click=lambda: st.toast("コピーしました（Ctrl+Cで手動）"))
 # 都道府県選択
 prefecture_list = sorted(prefecture_map.keys())
 selected_prefecture = st.selectbox("都道府県を選択してください", prefecture_list)
