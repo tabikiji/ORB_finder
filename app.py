@@ -66,6 +66,7 @@ st.markdown("## 📢 招待コード")
 
 invite_code = "K4M7NYJ"
 
+st.code(invite_code, language='text')
 
 
 
