@@ -68,12 +68,6 @@ invite_code = "K4M7NYJ"
 
 st.code(invite_code, language='text')
 
-
-
-# コピー用の説明（streamlit標準では自動コピー不可）
-
-st.button("📋 このコードをコピーしました！", on_click=lambda: st.toast("コピーしました（Ctrl+Cで手動）"))
-
 # 都道府県選択
 
 prefecture_list = sorted(prefecture_map.keys())
